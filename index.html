@@ -1,0 +1,1235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff8f1">
+<title>For Aysha ♡ From Your Stupid</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  --cream: #fff8f1;
+  --paper: #fffdf9;
+  --pink: #f9e3e8;
+  --pink2: #f4cbd6;
+  --rose: #d9899e;
+  --rose-dark: #a94f6b;
+  --brown: #6d514b;
+  --muted: #9b8580;
+  --line: #f0dce0;
+  --shadow: 0 15px 45px #a94f6b12;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, a:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 4px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, p { overflow-wrap: anywhere; }
+
+h1 {
+  font-size: clamp(46px, 9vw, 88px);
+  line-height: 1.08;
+  margin: 18px 0;
+}
+
+h2 {
+  font-size: clamp(34px, 6vw, 54px);
+  line-height: 1.17;
+  margin: 12px 0 20px;
+}
+
+h1 em, h2 em {
+  color: var(--rose-dark);
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.9;
+}
+
+button { -webkit-tap-highlight-color: transparent; }
+
+a { color: inherit; }
+
+section {
+  padding: 100px 22px;
+  position: relative;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.narrow {
+  max-width: 720px;
+  margin: auto;
+}
+
+.kicker {
+  color: var(--rose-dark);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.center { text-align: center; }
+
+.soft-text { color: var(--muted); }
+
+.heart {
+  color: var(--rose);
+  display: inline-block;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 23px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  transition: transform .25s, background .25s;
+  text-decoration: none;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-primary {
+  background: var(--rose-dark);
+  color: white;
+  box-shadow: 0 8px 25px #a94f6b20;
+}
+
+.btn-primary:hover { background: #8f405b; }
+
+.btn-light {
+  background: white;
+  color: var(--rose-dark);
+  border-color: var(--line);
+}
+
+.btn-light:hover { background: #fff0f4; }
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* Reading progress */
+.progress-track {
+  height: 3px;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 2000;
+  background: #f5e7e7;
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: var(--rose);
+}
+
+/* Navigation */
+.topbar {
+  position: sticky;
+  top: 3px;
+  z-index: 100;
+  background: #fffaf4ed;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #f0dce080;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--rose-dark);
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover { color: var(--rose-dark); }
+
+/* Opening scene */
+.hero {
+  min-height: calc(100svh - 48px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 10% 20%, #f7dfe7 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 85%, #fce9d9 0%, transparent 42%),
+    var(--cream);
+}
+
+.hero-inner {
+  max-width: 790px;
+  position: relative;
+  z-index: 2;
+  animation: rise 1.1s ease both;
+}
+
+.hero-flower {
+  font-size: 38px;
+  margin-bottom: 18px;
+  color: var(--rose);
+}
+
+.hero p {
+  max-width: 510px;
+  margin: 20px auto;
+  color: var(--muted);
+}
+
+.hero-bottom {
+  margin-top: 45px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--muted);
+}
+
+.hero-decoration {
+  position: absolute;
+  font-size: 30px;
+  color: #d9899e75;
+  pointer-events: none;
+}
+
+.hero-decoration.one { top: 15%; left: 9%; }
+.hero-decoration.two { top: 23%; right: 11%; font-size: 24px; }
+.hero-decoration.three { bottom: 15%; left: 14%; font-size: 22px; }
+.hero-decoration.four { bottom: 19%; right: 10%; }
+
+/* Chapter cards */
+.chapter-intro {
+  text-align: center;
+  max-width: 690px;
+  margin: auto;
+}
+
+.chapter-intro p {
+  color: var(--muted);
+  margin: 20px auto;
+}
+
+.memory-section {
+  background: #fff0f3;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.memory-card {
+  border: 1px solid #f4e1e5;
+  border-radius: 22px;
+  overflow: hidden;
+  background: white;
+  box-shadow: var(--shadow);
+  transition: transform .3s;
+}
+
+.memory-card:hover {
+  transform: translateY(-5px);
+}
+
+.memory-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  background: #f8e5e8;
+  color: var(--rose-dark);
+  text-align: center;
+}
+
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background:
+    radial-gradient(circle at 70% 25%, #fff7f0 0 10%, transparent 11%),
+    linear-gradient(145deg, #f9e5e9, #fbeedc);
+  display: grid;
+  place-items: center;
+  color: var(--rose-dark);
+  font-size: 43px;
+  overflow: hidden;
+}
+
+.memory-copy {
+  padding: 22px;
+}
+
+.memory-copy .number {
+  color: var(--rose);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.memory-copy h3 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.memory-copy p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.reveal-btn {
+  background: #fff0f3;
+  color: var(--rose-dark);
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.memory-extra {
+  display: none;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--brown);
+}
+
+.memory-extra.open { display: block; }
+
+/* Scrapbook gallery */
+.gallery-section { background: var(--paper); }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.photo-frame {
+  background: white;
+  padding: 12px 12px 22px;
+  box-shadow: 0 9px 30px #a94f6b10;
+  border: 1px solid #f3e8e6;
+  border-radius: 5px;
+  transform: rotate(-1deg);
+  transition: transform .3s;
+}
+
+.photo-frame:nth-child(even) { transform: rotate(1deg); }
+.photo-frame:hover { transform: rotate(0) translateY(-4px); }
+
+.photo-frame img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: #f8e5e8;
+  cursor: zoom-in;
+}
+
+.photo-caption {
+  text-align: center;
+  padding-top: 15px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 19px;
+}
+
+.gallery-hint {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+/* Apology chapter */
+.apology-section {
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 100%, #f8e4e8, transparent 60%),
+    var(--cream);
+}
+
+.apology-copy {
+  max-width: 670px;
+  margin: 28px auto 0;
+  text-align: left;
+}
+
+.apology-copy p {
+  margin-bottom: 20px;
+  color: #806d67;
+}
+
+.apology-copy strong { color: var(--rose-dark); }
+
+/* Garden of commitments */
+.garden-section { background: #fff0f3; }
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 38px;
+}
+
+.promise {
+  padding: 25px;
+  border: 1px solid #f3dfe4;
+  border-radius: 19px;
+  background: #fffdfb;
+  transition: transform .25s;
+}
+
+.promise:hover { transform: translateY(-3px); }
+
+.promise .flower {
+  font-size: 26px;
+  cursor: pointer;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+}
+
+.promise h3 {
+  font-size: 23px;
+  margin: 12px 0;
+}
+
+.promise p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.promise-detail {
+  display: none;
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.promise-detail.open { display: block; }
+
+/* Letter reveal */
+.letter-section { background: var(--cream); }
+
+.envelope-wrap {
+  max-width: 580px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.envelope {
+  display: block;
+  position: relative;
+  margin: 0 auto 24px;
+  width: min(100%, 390px);
+  height: 220px;
+  border: 0;
+  background: #f5d4dd;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform .3s;
+}
+
+.envelope:hover { transform: translateY(-4px); }
+
+.envelope::before,
+.envelope::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.envelope::before {
+  background: #fbe9ec;
+  clip-path: polygon(0 0, 100% 0, 50% 63%);
+  z-index: 2;
+}
+
+.envelope::after {
+  background: #edc1cf;
+  clip-path: polygon(0 100%, 0 0, 50% 60%, 100% 0, 100% 100%);
+  z-index: 1;
+}
+
+.seal {
+  position: absolute;
+  z-index: 3;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  background: var(--rose-dark);
+  border: 4px solid #f9e5e9;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+}
+
+.envelope-label {
+  position: absolute;
+  z-index: 4;
+  bottom: 18px;
+  width: 100%;
+  text-align: center;
+  color: #8f405b;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.letter-paper {
+  display: none;
+  text-align: left;
+  padding: clamp(23px, 6vw, 45px);
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  animation: rise .6s ease both;
+}
+
+.letter-paper.open { display: block; }
+
+.letter-paper h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.letter-paper p {
+  white-space: pre-line;
+  color: #806d67;
+  margin-bottom: 18px;
+}
+
+.signature {
+  color: var(--rose-dark);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+/* Future */
+.future-section {
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 100%, #f8dfe7, transparent 60%),
+    var(--cream);
+}
+
+.future-section p {
+  max-width: 590px;
+  margin: 22px auto;
+  color: var(--muted);
+}
+
+.final-response {
+  display: none;
+  max-width: 500px;
+  margin: 25px auto;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-radius: 18px;
+  color: var(--rose-dark);
+  line-height: 1.8;
+}
+
+.final-response.show { display: block; }
+
+footer {
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.music-controls {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 40px;
+  background: #fffdf8f5;
+  box-shadow: 0 5px 25px #a94f6b14;
+}
+
+.music-controls button {
+  background: transparent;
+  border: 0;
+  color: var(--rose-dark);
+  padding: 5px;
+}
+
+.music-controls input {
+  width: 65px;
+  accent-color: var(--rose-dark);
+}
+
+#musicStatus {
+  font-size: 11px;
+  color: var(--rose-dark);
+}
+
+#toast {
+  position: fixed;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100vw - 35px);
+  text-align: center;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 12px 18px;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  display: none;
+  z-index: 1000;
+}
+
+#toast.show { display: block; animation: rise .3s ease both; }
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: #fff8f1f5;
+}
+
+#lightbox.open { display: flex; }
+
+#lightbox img {
+  max-width: min(900px, 95vw);
+  max-height: 82svh;
+  object-fit: contain;
+  border: 8px solid white;
+  box-shadow: var(--shadow);
+}
+
+#lightboxClose {
+  position: absolute;
+  right: 22px;
+  top: 20px;
+  border: 0;
+  background: white;
+  color: var(--rose-dark);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+}
+
+.float-heart {
+  position: fixed;
+  bottom: -30px;
+  z-index: 50;
+  pointer-events: none;
+  color: #d9899e99;
+  animation: floatUp linear forwards;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.17); }
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(0) rotate(0); }
+  15% { opacity: .7; }
+  to { opacity: 0; transform: translateY(-100vh) rotate(25deg); }
+}
+
+@media (max-width: 700px) {
+  section { padding: 75px 19px; }
+  .memory-grid { grid-template-columns: 1fr; }
+  .promise-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .nav-inner { flex-direction: column; gap: 10px; }
+  .nav-links { gap: 12px; justify-content: center; }
+  .hero-decoration.one { left: 4%; }
+  .hero-decoration.two { right: 4%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="progress-track"><div id="progress"></div></div>
+
+<audio id="bgm" src="bgm.mp3" loop preload="none"></audio>
+
+<div class="music-controls">
+  <button id="musicButton" onclick="toggleMusic()" aria-label="Play or pause music">♫</button>
+  <span id="musicStatus">Our song</span>
+  <input id="volume" type="range" min="0" max="1" step="0.05" value="0.45" aria-label="Music volume">
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<nav class="topbar">
+  <div class="nav-inner">
+    <div class="brand">Aysha ♡</div>
+    <div class="nav-links">
+      <a href="#memories">Memories</a>
+      <a href="#growth">My growth</a>
+      <a href="#letter">Your letter</a>
+      <a href="#future">Our future</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CHAPTER 1: THE OPENING -->
+<section class="hero" id="home">
+  <span class="hero-decoration one">✿</span>
+  <span class="hero-decoration two">♡</span>
+  <span class="hero-decoration three">✧</span>
+  <span class="hero-decoration four">🌷</span>
+
+  <div class="hero-inner">
+    <div class="hero-flower">🌷</div>
+    <div class="kicker">A little world made just for you</div>
+
+    <h1>For Aysha,<br>from your <em>stupid.</em> <span class="heart">♡</span></h1>
+
+    <p>
+      A few memories, a letter from my heart, and things I wish
+      I could say while looking into your eyes.
+    </p>
+
+    <button class="btn btn-primary" onclick="goTo('memories')">
+      Enter our little world ♡
+    </button>
+
+    <div class="hero-bottom">MADE WITH LOVE · JUST FOR YOU</div>
+  </div>
+</section>
+
+<!-- CHAPTER 2: MEMORIES -->
+<section id="memories" class="memory-section">
+  <div class="wrap">
+    <div class="chapter-intro">
+      <div class="kicker">Chapter one · Our little moments</div>
+      <h2>Little things that<br><em>mean the world.</em></h2>
+      <p>
+        Some memories might seem small to everyone else.
+        But to me, they're little pieces of our story.
+        Tap each card to open a hidden message.
+      </p>
+    </div>
+
+    <div class="memory-grid">
+
+      <article class="memory-card">
+        <div class="photo-placeholder">🎀</div>
+        <div class="memory-copy">
+          <div class="number">MEMORY 01</div>
+          <h3>Your headband</h3>
+          <p>You gave me something of yours, and somehow that little thing became a memory I hold close.</p>
+          <button class="reveal-btn" onclick="toggleMemory(this)">Open the memory ♡</button>
+          <div class="memory-extra">
+            It wasn't about the headband itself. It was about you giving it to me. Small moments like that can mean so much to someone.
+          </div>
+        </div>
+      </article>
+
+      <article class="memory-card">
+        <div class="photo-placeholder">🤍</div>
+        <div class="memory-copy">
+          <div class="number">MEMORY 02</div>
+          <h3>Your big heart</h3>
+          <p>You do so much for me, sometimes in ways I probably don't appreciate enough.</p>
+          <button class="reveal-btn" onclick="toggleMemory(this)">Open the memory ♡</button>
+          <div class="memory-extra">
+            I see how much you give. I want to become someone who gives you the same care, consideration, and respect in return.
+          </div>
+        </div>
+      </article>
+
+      <article class="memory-card">
+        <div class="photo-placeholder">🌙</div>
+        <div class="memory-copy">
+          <div class="number">MEMORY 03</div>
+          <h3>Until 4 AM</h3>
+          <p>Our weekend conversations that went on for hours, including that one night until 4 AM.</p>
+          <button class="reveal-btn" onclick="toggleMemory(this)">Open the memory ♡</button>
+          <div class="memory-extra">
+            Just talking and losing track of time. I remember how special those hours felt. I'm grateful we got to share them.
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 3: PHOTO SCRAPBOOK -->
+<section id="photos" class="gallery-section">
+  <div class="wrap">
+    <div class="chapter-intro">
+      <div class="kicker">Chapter two · Our scrapbook</div>
+      <h2>A few little pieces<br><em>of our story.</em></h2>
+      <p>
+        Add your favourite pictures here. These frames are ready
+        for your photos.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="photo-frame">
+        <img src="photo1.jpg" alt="Our favourite memory" class="gallery-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="photo-placeholder" style="display:none">🌷</div>
+        <div class="photo-caption">A day I'll remember</div>
+      </div>
+
+      <div class="photo-frame">
+        <img src="photo2.jpg" alt="A special moment together" class="gallery-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="photo-placeholder" style="display:none">🎀</div>
+        <div class="photo-caption">My favourite person</div>
+      </div>
+
+      <div class="photo-frame">
+        <img src="photo3.jpg" alt="A memory together" class="gallery-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="photo-placeholder" style="display:none">💌</div>
+        <div class="photo-caption">Little things, big feelings</div>
+      </div>
+
+      <div class="photo-frame">
+        <img src="photo4.jpg" alt="Another treasured memory" class="gallery-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="photo-placeholder" style="display:none">🤍</div>
+        <div class="photo-caption">A piece of us</div>
+      </div>
+
+    </div>
+
+    <p class="gallery-hint">
+      Tap any photo to view it larger. Your photos stay on your device.
+    </p>
+  </div>
+</section>
+
+<!-- CHAPTER 4: ACCOUNTABILITY -->
+<section class="apology-section" id="apology">
+  <div class="narrow">
+    <div class="kicker">Chapter three · The truth</div>
+    <h2>You deserved<br><em>better from me.</em></h2>
+
+    <div class="apology-copy">
+      <p>
+        Aysha, I need to be honest about what happened.
+        I kissed someone else, and it happened more than once.
+        I won't make excuses for my choices or pretend it was a small thing.
+      </p>
+
+      <p>
+        I know I hurt you and damaged the trust you placed in me.
+        I'm sorry for putting you through that. You deserved honesty,
+        loyalty, and respect from me.
+      </p>
+
+      <p>
+        I can't erase what happened by writing something beautiful.
+        I can't ask you to forget it just because I regret it.
+      </p>
+
+      <p>
+        <strong>I'm sorry, Aysha.</strong> You have every right to feel
+        whatever you feel, and you don't owe me forgiveness on my timeline.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 5: GROWTH -->
+<section class="garden-section" id="growth">
+  <div class="wrap">
+    <div class="chapter-intro">
+      <div class="kicker">Chapter four · The person I'm becoming</div>
+      <h2>Still growing,<br><em>still learning.</em></h2>
+      <p>
+        I want my growth to be real, not just something I promise
+        when I'm scared of losing someone. Tap a flower to read more.
+      </p>
+    </div>
+
+    <div class="promise-grid">
+
+      <article class="promise">
+        <button class="flower" onclick="togglePromise(this)" aria-label="Read about honesty">🌷</button>
+        <h3>Honesty</h3>
+        <p>Choosing the truth, even when it's difficult.</p>
+        <div class="promise-detail">
+          Being honest means not hiding things, not giving half-truths,
+          and taking responsibility without waiting to be caught.
+        </div>
+      </article>
+
+      <article class="promise">
+        <button class="flower" onclick="togglePromise(this)" aria-label="Read about loyalty">🌸</button>
+        <h3>Loyalty</h3>
+        <p>Making choices that respect the relationship.</p>
+        <div class="promise-detail">
+          Loyalty is more than saying the right words. It means respecting
+          boundaries and making the right choices when nobody is watching.
+        </div>
+      </article>
+
+      <article class="promise">
+        <button class="flower" onclick="togglePromise(this)" aria-label="Read about patience">🌼</button>
+        <h3>Patience</h3>
+        <p>Letting trust take the time it needs.</p>
+        <div class="promise-detail">
+          I can't demand that you feel okay. If trust can be rebuilt,
+          it will take time, consistency, and room for your feelings.
+        </div>
+      </article>
+
+      <article class="promise">
+        <button class="flower" onclick="togglePromise(this)" aria-label="Read about change">🌺</button>
+        <h3>Real change</h3>
+        <p>Becoming better through everyday actions.</p>
+        <div class="promise-detail">
+          I want to grow into someone I'm proud of, regardless of
+          whether I get the outcome I hope for. My choices are my responsibility.
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 6: LETTER -->
+<section class="letter-section" id="letter">
+  <div class="narrow center">
+    <div class="kicker">Chapter five · Something from my heart</div>
+    <h2>A letter for <em>Aysha.</em></h2>
+    <p class="soft-text">There's something waiting for you inside.</p>
+
+    <div class="envelope-wrap">
+      <button class="envelope" id="envelope" onclick="openLetter()" aria-label="Open your letter">
+        <span class="seal">♡</span>
+        <span class="envelope-label">FOR AYSHA · OPEN ME</span>
+      </button>
+
+      <div class="letter-paper" id="letterPaper">
+        <h3>Hey, Aysha. ♡</h3>
+
+        <p> I know you call me stupid, and honestly, I gave you reasons to be disappointed in me.
+
+I don't want to use that nickname, our memories, or how much I love you to make what I did seem smaller.
+
+I hurt you. And because it happened more than once, I understand why saying sorry might not mean much to you right now.
+
+You deserved honesty, loyalty, and respect from me. I should have given you those things without needing to be reminded.
+
+I've changed a lot, and I want to keep growing. But I know saying that isn't enough. I want to show it through the way I act, the choices I make, and the way I treat people.
+
+I still want us. I still care about you, and I hope we can find a better chapter one day. But I know I can't demand another chance from you.
+
+You don't have to pretend everything is okay. You don't have to forgive me before you're ready.
+
+I just wanted you to know that I'm genuinely sorry, Aysha. If you ever choose to give us another chance, I want to earn your trust through my actions, one day at a time.</p>
+
+        <div class="signature">— Your stupid ♡</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 7: THE FUTURE -->
+<section class="future-section" id="future">
+  <div class="narrow">
+    <div style="font-size:42px;margin-bottom:20px">🌷</div>
+    <div class="kicker">The next chapter is unwritten</div>
+    <h2>I'm building a better me.<br><em>And I still hope for us.</em></h2>
+
+    <p>
+      Aysha, I want to become successful, grow into someone I'm proud of,
+      and build a life with purpose. A part of me hopes that one day,
+      if we both still want it, we can share some of that future together.
+    </p>
+
+    <p>
+      But I know your choice is yours. I won't ask you to wait for me,
+      and I won't treat my growth as something you owe me a reward for.
+    </p>
+
+    <p>
+      I hope for us. I'll keep working on myself either way.
+      And I'll always be grateful for the memories we made.
+    </p>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="showEnding('talk')">
+        I'm willing to talk ♡
+      </button>
+      <button class="btn btn-light" onclick="showEnding('space')">
+        I need some time 🤍
+      </button>
+    </div>
+
+    <div class="final-response" id="finalResponse" aria-live="polite"></div>
+
+    <h2 style="font-size:32px;margin-top:60px">
+      You matter, Aysha. <em>Always.</em>
+    </h2>
+
+    <p style="font-family:'Playfair Display',serif;font-style:italic">
+      From your stupid, with a sincere heart. ♡
+    </p>
+  </div>
+</section>
+
+<footer>
+  A little world made for Aysha <span class="heart">♡</span>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview">
+  <button id="lightboxClose" onclick="closeLightbox()" aria-label="Close photo">×</button>
+  <img id="lightboxImage" src="" alt="Expanded memory">
+</div>
+
+<script>
+const bgm = document.getElementById("bgm");
+const musicButton = document.getElementById("musicButton");
+const musicStatus = document.getElementById("musicStatus");
+const volumeSlider = document.getElementById("volume");
+const toast = document.getElementById("toast");
+
+bgm.volume = Number(volumeSlider.value);
+
+volumeSlider.addEventListener("input", () => {
+  bgm.volume = Number(volumeSlider.value);
+});
+
+async function toggleMusic() {
+  if (bgm.paused) {
+    try {
+      await bgm.play();
+      musicButton.textContent = "Ⅱ";
+      musicStatus.textContent = "Playing our song";
+    } catch (error) {
+      musicStatus.textContent = "Check bgm.mp3";
+      showToast("Put bgm.mp3 beside index.html, then try again.");
+    }
+  } else {
+    bgm.pause();
+    musicButton.textContent = "♫";
+    musicStatus.textContent = "Our song";
+  }
+}
+
+bgm.addEventListener("error", () => {
+  musicStatus.textContent = "Add bgm.mp3";
+});
+
+function goTo(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function toggleMemory(button) {
+  const detail = button.nextElementSibling;
+  const open = detail.classList.toggle("open");
+  button.textContent = open ? "Close memory ♡" : "Open the memory ♡";
+}
+
+function togglePromise(button) {
+  const detail = button.parentElement.querySelector(".promise-detail");
+  detail.classList.toggle("open");
+}
+
+function openLetter() {
+  const letter = document.getElementById("letterPaper");
+  const envelope = document.getElementById("envelope");
+
+  letter.classList.toggle("open");
+
+  if (letter.classList.contains("open")) {
+    envelope.querySelector(".envelope-label").textContent = "YOUR LETTER IS OPEN ♡";
+    setTimeout(() => {
+      letter.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+  } else {
+    envelope.querySelector(".envelope-label").textContent = "FOR AYSHA · OPEN ME";
+  }
+}
+
+function showEnding(choice) {
+  const box = document.getElementById("finalResponse");
+
+  box.textContent = choice === "talk"
+    ? "Thank you for being willing to talk. I'll listen honestly and take responsibility without making excuses. ♡"
+    : "I understand, Aysha. Take the time you need. I will respect your space and won't pressure you for an answer. 🤍";
+
+  box.classList.add("show");
+  box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+let toastTimer;
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 3500);
+}
+
+// Scroll progress
+window.addEventListener("scroll", () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = total > 0 ? (window.scrollY / total) * 100 : 0;
+  document.getElementById("progress").style.width = progress + "%";
+}, { passive: true });
+
+// Photo preview
+document.querySelectorAll(".gallery-photo").forEach(photo => {
+  photo.addEventListener("click", () => {
+    if (!photo.complete || photo.naturalWidth === 0) return;
+
+    document.getElementById("lightboxImage").src = photo.src;
+    document.getElementById("lightbox").classList.add("open");
+  });
+});
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("open");
+}
+
+document.getElementById("lightbox").addEventListener("click", event => {
+  if (event.target.id === "lightbox") closeLightbox();
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeLightbox();
+});
+
+// Gentle floating hearts
+let heartCount = 0;
+
+function createHeart() {
+  if (heartCount >= 10) return;
+
+  heartCount++;
+
+  const heart = document.createElement("span");
+  heart.className = "float-heart";
+  heart.textContent = ["♡", "♥", "✿"][Math.floor(Math.random() * 3)];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (12 + Math.random() * 16) + "px";
+  heart.style.animationDuration = (7 + Math.random() * 5) + "s";
+
+  document.body.appendChild(heart);
+
+  heart.addEventListener("animationend", () => {
+    heart.remove();
+    heartCount--;
+  });
+}
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  setInterval(createHeart, 1500);
+}
+</script>
+
+</body>
+</html>
